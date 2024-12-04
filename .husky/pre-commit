@@ -1,3 +1,2 @@
-npx husky add .husky/pre-commit 
 npm test
 npx lint-staged
