@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./page.module.css";
 import Link from "next/link";
+import { Heading } from "@chakra-ui/react";
 
 export default function Home() {
   return (
@@ -13,9 +14,8 @@ export default function Home() {
           width={250}
           height={312}
         />
-       
       </main>
-      <h1>Thank you for coming by...</h1>
+      <Heading size="2xl">Thank you for coming by...</Heading>
 
       <footer className={styles.footer}>
         <Link href="/travel/korea">
