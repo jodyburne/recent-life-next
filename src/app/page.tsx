@@ -1,34 +1,34 @@
 import React from "react";
 import Link from "next/link";
-import { Heading } from "@chakra-ui/react";
-
+import { Center, Heading, Stack, Flex } from "@chakra-ui/react";
 export default function Home() {
   return (
-    <div>
-      <main>
-        <img
-          src="https://pyxis.nymag.com/v1/imgs/bc9/ccb/936534d0b82b77cf0ffbac92010ee38ea3-06-al-pacino.2x.rvertical.w512.jpg"
-          alt="Next.js logo"
-          width={250}
-          height={312}
-        />
-      </main>
-      <Heading size="2xl">Thank you for coming by...</Heading>
+    <Stack px={8} spaceY={8} py={16} height="100vh">
+      <Center>
+        <Heading size="6xl">Thank you for coming by...</Heading>
+      </Center>
+      <Center>
+        <Stack spaceY={2}>
+          <img
+            src="https://pyxis.nymag.com/v1/imgs/bc9/ccb/936534d0b82b77cf0ffbac92010ee38ea3-06-al-pacino.2x.rvertical.w512.jpg"
+            alt="Next.js logo"
+            width={250}
+            height={312}
+          />
 
-      <footer>
-        <Link href="/travel/korea">
-          {/* <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          /> */}
-          Korea
-        </Link>
-        <Link href="travel/japan">Japan</Link>
-        <Link href="/teapots">Teapots</Link>
-      </footer>
-    </div>
+          <Flex width={250} justifyContent="space-between">
+            <Link href="/travel/korea">
+              <Heading size="sm">Korea</Heading>
+            </Link>
+            <Link href="travel/japan">
+              <Heading size="sm">Japan</Heading>
+            </Link>
+            <Link href="/teapots">
+              <Heading size="sm">Teapots</Heading>
+            </Link>
+          </Flex>
+        </Stack>
+      </Center>
+    </Stack>
   );
 }

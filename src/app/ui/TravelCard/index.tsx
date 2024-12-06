@@ -1,13 +1,11 @@
-import { Card, IconButton, Image, Flex, Box, Button } from "@chakra-ui/react";
+import { Card, IconButton, Image, Flex, Box } from "@chakra-ui/react";
 import { DataItem } from "@/app/lib/types";
 import { IoIosMore } from "react-icons/io";
 import {
-  DrawerActionTrigger,
   DrawerBackdrop,
   DrawerBody,
   DrawerCloseTrigger,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   DrawerRoot,
   DrawerTitle,
