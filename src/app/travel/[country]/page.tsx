@@ -2,6 +2,8 @@ import { koreaMock, japanMock } from "@/app/lib/mockData";
 import { DataItem } from "@/app/lib/types";
 import TravelCard from "@/app/ui/TravelCard";
 import { Center, Heading, SimpleGrid, Stack } from "@chakra-ui/react";
+import axios from "axios";
+import { useEffect } from "react";
 
 const CountryPage = async ({
   params,
@@ -24,6 +26,19 @@ const CountryPage = async ({
       emoji: "🇯🇵",
     },
   };
+
+  const fetchPosts = async () => {
+    try {
+      const res = await axios.get(`http://localhost:3000/${country}`);
+      if (res.data) {
+        console.log(res.data);
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  fetchPosts();
 
   const { mock, emoji } = countryMapping[country];
   return (
